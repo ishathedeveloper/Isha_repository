@@ -122,7 +122,6 @@ ul {
 img {
     max-width: 100%;
     display: block;
-    margin: 10px 0;
 }
 
 .content-wrapper {
@@ -780,7 +779,7 @@ img {
 
 @media (max-width : 767px){
     h1{
-        font-size: 50px;
+        font-size: 40px;
         line-height: 1.2;
     }
 }
