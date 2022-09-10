@@ -99,14 +99,21 @@ margin-bottom: 60px;
 /* project-section */
 .project-section .program-items {
 margin: 0 15px;
+margin-bottom: 30px;
+}
+.project-section .img-program{
+    overflow: hidden;
 }
 .project-section .img-program img {
 height: 200px;
-
 width: 100%;
+transition: .5s;
+}
+.project-section .program-items:hover .img-program img {
+transform: scale(1.1);
 }
 
-.project-section .para-program p{
+.project-section .para-program {
 padding: 20px;
 }
 .heading-certi {
