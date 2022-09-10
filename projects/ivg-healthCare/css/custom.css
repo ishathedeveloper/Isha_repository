@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--primary_color);
+}
+
+.fixed-header nav a {
+  background-image: -o-linear-gradient(left, var(--secondary_color), var(--secondary_color) 50%, var(--primary_color) 50%);
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--secondary_color)), color-stop(50%, var(--secondary_color)), color-stop(50%, var(--primary_color)));
+  background-image: linear-gradient(90deg, var(--secondary_color), var(--secondary_color) 50%, var(--primary_color) 0);
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+
+}
+
+.fixed-header nav a:hover {
+  background-position: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fixed-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.fixed-header .logo {
+  /* height: 30px; */
+  width: 100%;
+  max-width: 250px;
+}
+
+.fixed-header ul li {
+  display: inline;
+  padding: 0 20px;
+}
+
+.fixed-header nav {
+  margin-left: auto;
+}
+
+.fixed-header .toggle-button {
+  opacity: 0;
+}
+
+@media(max-width:767px) {
+  .fixed-header {
+    display: block;
+    position: relative;
+  }
+
+  .fixed-header ul li {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .fixed-header .toggle-button {
+    opacity: 1;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+
+  .fixed-header .toggle-button i {
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: lighter;
+    transform: rotate(45deg);
+    transition: .3s;
+    color: var(--primary_color);
+  }
+
+  .fixed-header nav {
+    height: 100vh;
+    background-color: var(--white);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: .5s;
+    position: absolute;
+    right: 0;
+    left: 50%;
+    padding: 15px;
+
+  }
+
+  .fixed-header.mobile-open nav {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .fixed-header.mobile-open .toggle-button i {
+    font-size: 36px;
+    transform: rotate(0deg);
+  }
+
+  header {
+    background-color: transparent;
+  }
+}
+
+/* banner section */
+
+.banner-section .banner-items {
+  margin: 0 15px;
+}
+
+.banner-section .buttons-banner {
+  margin-top: 37px;
+
+}
+
+.banner-section .banner-items img {
+  max-width: 100%;
+}
+
+/* cure-section */
+.cure-section .cure-items {
+  margin: 0 15px;
+}
+
+/* service-section */
+.service-section .service-button {
+  margin-top: 40px;
+
+}
+
+.service-section .service-button a {
+  padding: 20px 28px;
+}
+
+.cure-section .cure-images {
+  position: relative;
+}
+
+.cure-section .circle-bg {
+  position: absolute;
+  background-image: url(../pics/background.svg);
+  content: "";
+  top: 6%;
+  left: 18%;
+  width: 190px;
+  max-width: 190px;
+  height: 190px;
+  max-height: 190px;
+  z-index: -1;
+
+}
+
+.cure-section .cure-heading h4 {
+  margin-top: 55px;
+
+}
+
+/* testimonial-section */
+.testimonial-section .cure-images {
+  position: relative;
+  margin-left: 100px;
+}
+
+.testimonial-section .circle-bg-primary {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 150.55px;
+  height: 150.02px;
+  left: -26.86px;
+  top: 35.55px;
+  border-radius: 100px;
+  background-color: var(--primary_color);
+
+}
+
+/* conatct-section */
+.conatct-section .logo-img img {
+  max-width: 100%;
+}
+
+.conatct-section .subitem {
+  margin: 0 15px;
+}
+
+.conatct-section .subitem ul li a,
+.contact-icons a {
+  line-height: 40px;
+  color: #000;
+  font-size: 20px;
+}
+
+.testimonial-inner {
+  position: relative;
+}
+
+.testimonial-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 80px;
+  background-image: url(../pics/slider-background.svg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left top;
+}
+
+.testimonial-outer {
+  position: relative;
+  padding: 20px 0;
+}
+
+.testimonial-outer::before {
+  background-color: #eeeddc;
+  content: '';
+  position: absolute;
+  left: 3%;
+  right: 0;
+  border-radius: 18px 0 0 18px;
+  height: 100%;
+  z-index: -1;
+}
+.button-arrow{
+  position: absolute;
+  z-index: 9;
+  cursor: pointer;
+  top: 40%;
+ 
+}
+.button-arrow i{
+  font-size: 50px;
+}
+#btn-left{
+  left: -34px;
+}
+#btn-right{
+  right: -34px;
+}
